@@ -42,7 +42,7 @@ class _InitializationPageState extends State<InitializationPage> {
                   // Once the initialization is completed, let's move to another page
                   //
                   WidgetsBinding.instance.addPostFrameCallback((_) {
-                    Navigator.of(context).pushReplacementNamed('decision');
+                    Navigator.of(context).pushReplacementNamed('/decision');
                   });
                 }
                 return Text('Initialization in progress... ${state.progress}');

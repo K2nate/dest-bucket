@@ -51,13 +51,25 @@ class AuthenticationPage extends StatelessWidget {
                   )
                 );
 
+                // Button to fake the authentication (failure)
+                children.add(
+                  ListTile(
+                    title: RaisedButton(
+                      child: Text('Log in (failure)'),
+                      onPressed: () {
+                        bloc.emitEvent(AuthenticationEventLogin(name: 'failure'));
+                      },
+                    ),
+                  ),
+                );
+
                 // Button to redirect to the registration page
                 children.add(
                   ListTile(
                     title: RaisedButton(
-                      child: Text('Register'),
+                      child: Text('SignUp'),
                       onPressed: () {
-                        Navigator.of(context).pushNamed('/register');
+                        Navigator.of(context).pushNamed('/signup');
                       },
                     ),
                   )
