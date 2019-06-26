@@ -1,5 +1,5 @@
 import 'package:dest_bucket/components/blocs/common/bloc_provider.dart';
-import 'package:dest_bucket/components/blocs/common/widgets/bloc_state_builder.dart';
+import 'package:dest_bucket/components/blocs/common/widgets/bloc_event_state_builder.dart';
 import 'package:dest_bucket/components/blocs/authentication/authentication_bloc.dart';
 import 'package:dest_bucket/components/blocs/authentication/authentication_event.dart';
 import 'package:dest_bucket/components/blocs/authentication/authentication_state.dart';

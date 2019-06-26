@@ -1,4 +1,4 @@
-import 'package:dest_bucket/components/blocs/common/widgets/bloc_state_builder.dart';
+import 'package:dest_bucket/components/blocs/common/widgets/bloc_event_state_builder.dart';
 import 'package:dest_bucket/components/blocs/initialization/app_initialization_bloc.dart';
 import 'package:dest_bucket/components/blocs/initialization/app_initialization_event.dart';
 import 'package:dest_bucket/components/blocs/initialization/app_initialization_state.dart';
