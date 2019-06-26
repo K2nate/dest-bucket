@@ -2,16 +2,16 @@ import 'package:dest_bucket/components/blocs/common/bloc_event_state.dart';
 import 'app_initialization_event.dart';
 import 'app_initialization_state.dart';
 
-class AppInitializationBloc extends BlocEventStateBase<AppInitializationEvent, AppInitializationState> {
-
-  AppInitializationBloc() :
-        super(initialState : AppInitializationState.notInitialized(),
-      );
+class AppInitializationBloc
+    extends BlocEventStateBase<AppInitializationEvent, AppInitializationState> {
+  AppInitializationBloc()
+      : super(
+          initialState: AppInitializationState.notInitialized(),
+        );
 
   @override
-  Stream<AppInitializationState> eventHandler(
-      AppInitializationEvent event, AppInitializationState currentState) async* {
-
+  Stream<AppInitializationState> eventHandler(AppInitializationEvent event,
+      AppInitializationState currentState) async* {
     if (!currentState.isInitialized) {
       yield AppInitializationState.notInitialized();
     }

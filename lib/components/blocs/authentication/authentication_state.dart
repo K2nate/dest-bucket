@@ -2,7 +2,6 @@ import 'package:dest_bucket/components/blocs/common/bloc_event_state.dart';
 import 'package:meta/meta.dart';
 
 class AuthenticationState extends BlocState {
-
   final bool isAuthenticated;
   final bool isAuthenticating;
   final bool hasFailed;

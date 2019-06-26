@@ -7,7 +7,6 @@ import 'package:dest_bucket/pages/portal_page.dart';
 import 'package:flutter/material.dart';
 
 class AuthDecisionPage extends StatefulWidget {
-
   @override
   AuthDecisionPageState createState() {
     return new AuthDecisionPageState();
@@ -15,7 +14,6 @@ class AuthDecisionPage extends StatefulWidget {
 }
 
 class AuthDecisionPageState extends State<AuthDecisionPage> {
-
   AuthenticationState oldAuthenticationState;
 
   @override
@@ -45,12 +43,11 @@ class AuthDecisionPageState extends State<AuthDecisionPage> {
 
   void _redirectToPage(BuildContext context, Widget page) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      MaterialPageRoute newRoute = MaterialPageRoute(
-        builder: (BuildContext context) => page
-      );
+      MaterialPageRoute newRoute =
+          MaterialPageRoute(builder: (BuildContext context) => page);
 
-      Navigator.of(context).pushAndRemoveUntil(newRoute, ModalRoute.withName('/decision'));
+      Navigator.of(context)
+          .pushAndRemoveUntil(newRoute, ModalRoute.withName('/decision'));
     });
   }
-
 }

@@ -40,16 +40,14 @@ class AuthenticationPage extends StatelessWidget {
                 List<Widget> children = <Widget>[];
 
                 // Button to fake the authentication (success)
-                children.add(
-                  ListTile(
-                    title: RaisedButton(
-                      child: Text('Log in (success)'),
-                      onPressed: () {
-                        bloc.emitEvent(AuthenticationEventLogin(name: 'Didier'));
-                      },
-                    ),
-                  )
-                );
+                children.add(ListTile(
+                  title: RaisedButton(
+                    child: Text('Log in (success)'),
+                    onPressed: () {
+                      bloc.emitEvent(AuthenticationEventLogin(name: 'Didier'));
+                    },
+                  ),
+                ));
 
                 // Button to fake the authentication (failure)
                 children.add(
@@ -57,23 +55,22 @@ class AuthenticationPage extends StatelessWidget {
                     title: RaisedButton(
                       child: Text('Log in (failure)'),
                       onPressed: () {
-                        bloc.emitEvent(AuthenticationEventLogin(name: 'failure'));
+                        bloc.emitEvent(
+                            AuthenticationEventLogin(name: 'failure'));
                       },
                     ),
                   ),
                 );
 
                 // Button to redirect to the registration page
-                children.add(
-                  ListTile(
-                    title: RaisedButton(
-                      child: Text('SignUp'),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed('/signup');
-                      },
-                    ),
-                  )
-                );
+                children.add(ListTile(
+                  title: RaisedButton(
+                    child: Text('SignUp'),
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/signup');
+                    },
+                  ),
+                ));
 
                 // Display a text if the authentication failed
                 if (state.hasFailed) {

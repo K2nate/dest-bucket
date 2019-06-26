@@ -116,11 +116,11 @@ class _SignUpFormState extends State<SignUpForm> {
                   child: Text('SignUp'),
                   onPressed: (snapshot.hasData && snapshot.data == true)
                       ? () {
-                    _signUpBloc.emitEvent(SignUpEvent(
-                        event: SignUpEventType.working,
-                        email: _emailController.text,
-                        password: _passwordController.text));
-                  }
+                          _signUpBloc.emitEvent(SignUpEvent(
+                              event: SignUpEventType.working,
+                              email: _emailController.text,
+                              password: _passwordController.text));
+                        }
                       : null,
                 );
               }),

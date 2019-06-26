@@ -5,14 +5,11 @@ import 'package:dest_bucket/components/blocs/initialization/app_initialization_s
 import 'package:flutter/material.dart';
 
 class InitializationPage extends StatefulWidget {
-
   @override
   _InitializationPageState createState() => _InitializationPageState();
-
 }
 
 class _InitializationPageState extends State<InitializationPage> {
-
   AppInitializationBloc bloc;
 
   @override

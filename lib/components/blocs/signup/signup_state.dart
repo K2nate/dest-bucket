@@ -15,16 +15,21 @@ class SignUpState extends BlocState {
     return SignUpState();
   }
 
-  factory SignUpState.busy(){
-    return SignUpState(isBusy: true,);
+  factory SignUpState.busy() {
+    return SignUpState(
+      isBusy: true,
+    );
   }
 
-  factory SignUpState.success(){
-    return SignUpState(isSuccess: true,);
+  factory SignUpState.success() {
+    return SignUpState(
+      isSuccess: true,
+    );
   }
 
-  factory SignUpState.failure(){
-    return SignUpState(isFailure: true,);
+  factory SignUpState.failure() {
+    return SignUpState(
+      isFailure: true,
+    );
   }
-
 }

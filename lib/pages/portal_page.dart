@@ -1,4 +1,3 @@
-
 import 'package:dest_bucket/widgets/log_out_button.dart';
 import 'package:flutter/material.dart';
 

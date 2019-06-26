@@ -7,7 +7,6 @@ abstract class BlocBase {
 }
 
 class BlocProvider<T extends BlocBase> extends StatefulWidget {
-
   final Widget child;
   final T bloc;
 
@@ -15,13 +14,14 @@ class BlocProvider<T extends BlocBase> extends StatefulWidget {
     Key key,
     @required this.child,
     @required this.bloc,
-  }): super(key: key);
+  }) : super(key: key);
 
   _BlocProviderState<T> createState() => _BlocProviderState<T>();
 
   static T of<T extends BlocBase>(BuildContext context) {
     final _type = _typeOf<_BlocProviderInherited<T>>();
-    _BlocProviderInherited<T> _provider = context.ancestorInheritedElementForWidgetOfExactType(_type)?.widget;
+    _BlocProviderInherited<T> _provider =
+        context.ancestorInheritedElementForWidgetOfExactType(_type)?.widget;
     return _provider?.bloc;
   }
 }
@@ -43,7 +43,6 @@ class _BlocProviderState<T extends BlocBase> extends State<BlocProvider<T>> {
 }
 
 class _BlocProviderInherited<T> extends InheritedWidget {
-
   final T bloc;
 
   _BlocProviderInherited({
@@ -55,4 +54,3 @@ class _BlocProviderInherited<T> extends InheritedWidget {
   @override
   bool updateShouldNotify(_BlocProviderInherited oldWidget) => false;
 }
-

@@ -1,10 +1,10 @@
 import 'package:dest_bucket/components/blocs/common/bloc_event_state.dart';
 import 'package:flutter/material.dart';
 
-typedef Widget AsyncBlocStateBuilder<BlocState>(BuildContext context, BlocState state);
+typedef Widget AsyncBlocStateBuilder<BlocState>(
+    BuildContext context, BlocState state);
 
 class BlocEventStateBuilder<BlocState> extends StatelessWidget {
-
   final BlocEventStateBase<BlocEvent, BlocState> bloc;
   final AsyncBlocStateBuilder<BlocState> builder;
 
@@ -12,9 +12,9 @@ class BlocEventStateBuilder<BlocState> extends StatelessWidget {
     Key key,
     @required this.builder,
     @required this.bloc,
-  }): assert(builder != null),
-      assert(bloc != null),
-      super(key: key);
+  })  : assert(builder != null),
+        assert(bloc != null),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,5 +26,4 @@ class BlocEventStateBuilder<BlocState> extends StatelessWidget {
       },
     );
   }
-
 }

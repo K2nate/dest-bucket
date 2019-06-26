@@ -1,7 +1,6 @@
 import 'package:dest_bucket/components/blocs/common/bloc_event_state.dart';
 
 class AuthenticationEvent extends BlocEvent {
-
   final String name;
 
   AuthenticationEvent({
@@ -13,8 +12,8 @@ class AuthenticationEventLogin extends AuthenticationEvent {
   AuthenticationEventLogin({
     String name,
   }) : super(
-    name: name,
-  );
+          name: name,
+        );
 }
 
 class AuthenticationEventLogout extends AuthenticationEvent {}

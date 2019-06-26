@@ -3,6 +3,7 @@ import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
 
 abstract class BlocEvent extends Object {}
+
 abstract class BlocState extends Object {}
 
 abstract class BlocEventStateBase<BlocEvent, BlocState> implements BlocBase {
@@ -34,16 +35,15 @@ abstract class BlocEventStateBase<BlocEvent, BlocState> implements BlocBase {
   //
   BlocEventStateBase({
     @required this.initialState,
-  }){
+  }) {
     //
     // For each received event, we invoke the [eventHandler] and
     // emit any resulting newState
     //
     _eventController.listen((BlocEvent event) {
       BlocState currentState = _stateController.value ?? initialState;
-      eventHandler(event, currentState)
-          .forEach((BlocState newState) {
-            _stateController.sink.add(newState);
+      eventHandler(event, currentState).forEach((BlocState newState) {
+        _stateController.sink.add(newState);
       });
     });
   }

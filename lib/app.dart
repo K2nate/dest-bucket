@@ -1,4 +1,3 @@
-
 import 'package:dest_bucket/components/blocs/authentication/authentication_bloc.dart';
 import 'package:dest_bucket/components/blocs/common/bloc_provider.dart';
 import 'package:dest_bucket/pages/auth_decision_page.dart';
@@ -7,7 +6,6 @@ import 'package:dest_bucket/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider<AuthenticationBloc>(
@@ -25,5 +23,4 @@ class App extends StatelessWidget {
       ),
     );
   }
-
 }

@@ -5,12 +5,13 @@ import 'package:dest_bucket/components/blocs/signup/signup_state.dart';
 class SignUpBloc extends BlocEventStateBase<SignUpEvent, SignUpState> {
   SignUpBloc()
       : super(
-    initialState: SignUpState.noAction(),
-  );
+          initialState: SignUpState.noAction(),
+        );
 
   @override
-  Stream<SignUpState> eventHandler(SignUpEvent event, SignUpState currentState) async* {
-    if (event.event == SignUpEventType.working){
+  Stream<SignUpState> eventHandler(
+      SignUpEvent event, SignUpState currentState) async* {
+    if (event.event == SignUpEventType.working) {
       yield SignUpState.busy();
       print('SignUp of ${event.email}/${event.password}');
 
